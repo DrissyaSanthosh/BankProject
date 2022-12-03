@@ -1,0 +1,68 @@
+{%  load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/login">
+        {% csrf_token %}
+          
+            <input type="text" placeholder="Enter your Name" name="name" required ><br><br>
+            <input type="text" placeholder="DOB" name="DOB" required><br><br>
+            <input type="text" placeholder="AGE" name="AGE" required><br><br>
+            <input type="text" placeholder="GENDER" name="GENDER"required><br><br>
+            <input type="text" placeholder="PHONE NUMBER" name="PH-NO" required><br><br>
+            <input type="text" placeholder="MAILID" name="MAIL-ID" required><br><br>
+            <input type="text" placeholder="ADDRESS" name="ADDRESS"required><br><br>
+    
+            <select name="dist" id="dist" required>
+            <option value="volvo">DISTRICT</option>
+            <option value="saab">Ernakulam</option>
+            <option value="saab">idukki</option>
+            <option value="mercedes">kottayam</option>
+            <option value="audi">kollam</option>
+            </select><br><br>
+            <select name="dist" id="dist" required>
+                <option value="volvo">BRANCH</option>
+                <option value="saab">Ernakulam</option>
+                <option value="saab">Aluva</option>
+                <option value="mercedes">Kadavanthara</option>
+                <option value="audi">Edappaly</option>
+                </select><br><br>
+            <select name="dist" id="dist" required>
+                <option value="volvo">ACCOUNT TYPE</option>
+                <option value="saab">Current Acc</option>
+                <option value="saab">Saving Acc</option>
+                </select><br><br>
+            <input type="checkbox" id="BANK" name="BANK" value="MATERIALS PROVIDE">
+            <label for="MATERIALS PROVIDE"> debit card</label><br>    
+            <input type="checkbox" id="BANK" name="BANK" value="MATERIALS PROVIDE">
+            <label for="MATERIALS PROVIDE"> credit card,</label><br>    
+                    
+            <input type="checkbox" id="BANK" name="BANK" value="MATERIALS PROVIDE">
+            <label for="MATERIALS PROVIDE"> cheque book</label><br>    
+         
+           <script>         
+            function myFunction() {
+                alert("Your form sucessfully submited");
+                window.location.reload();
+              }
+            </script>
+            <input type="submit" class="btn btn-defeault btn-send" onclick="myFunction()">
+            <input type="submit" value='logout'href="logout"><br>
+            <div>
+            <a href="/">back to home page</a>
+            </div>
+       
+
+    </form>
+
+    
+    
+</body>
+</html>
+
